@@ -1,6 +1,7 @@
 document.querySelector('#button-random-dog').addEventListener('click', randomClick)
 document.querySelector('#button-show-breed').addEventListener('click', breedClick)
 document.querySelector('#button-show-sub-breed').addEventListener('click',subBreedList)
+document.querySelector('#button-show-all').addEventListener('click',showAllBreeds)
 async function randomClick() {
     let response = await fetch('https://dog.ceo/api/breeds/image/random')
     const data = await response.json()
@@ -44,4 +45,34 @@ async function subBreedList() {
         breedListContainer.innerHTML = `<p>Breed not found!</p>`
     }
 
+}
+
+
+async function showAllBreeds() {
+    const listAllDogsBreed = "https://dog.ceo/api/breeds/list/all";
+    const content = document.getElementById('content');
+    content.innerHTML = "";
+    const resp = await fetch(listAllDogsBreed);
+    const data = await resp.json();
+
+    const breedsList = document.createElement("ol");
+
+    for (const breed in data.message) {
+        const breedItem = document.createElement("li");
+        breedItem.textContent = breed;
+
+        const subBreeds = data.message[breed];
+        if (subBreeds.length > 0) {
+            const subBreedsList = document.createElement("ul");
+            subBreeds.forEach((subBreed) => {
+                const subBreedItem = document.createElement("li");
+                subBreedItem.textContent = subBreed;
+                subBreedsList.appendChild(subBreedItem);
+            });
+            breedItem.appendChild(subBreedsList);
+        }
+
+        breedsList.appendChild(breedItem);
+    }
+    content.appendChild(breedsList);
 }
