@@ -5,7 +5,7 @@ document.querySelector('#button-show-all').addEventListener('click',showAllBreed
 async function randomClick() {
     let response = await fetch('https://dog.ceo/api/breeds/image/random')
     const data = await response.json()
-    document.querySelector('#content').innerHTML = `<img src="${data.message}">`
+    document.querySelector('#content').innerHTML = `<img alt="image" id="imageOfDog" src="${data.message}">`
 }
 async function breedClick() {
     try {
@@ -14,7 +14,7 @@ async function breedClick() {
 
         if (response.ok) {
             const data = await response.json()
-            document.querySelector('#content').innerHTML = `<img src="${data.message}">`
+            document.querySelector('#content').innerHTML = `<img alt="dog image" src="${data.message}">`
         } else {
             document.querySelector('#content').innerHTML = `<p>Breed not found!</p>`
         }

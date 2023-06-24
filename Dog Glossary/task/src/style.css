@@ -1,0 +1,117 @@
+body {
+    font-family: "Bookman Old Style", sans-serif;
+}
+p {
+    font-size: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 4px 4px 6px rgba(8, 17, 111, 1);
+}
+
+#btn-container {
+    background-color: #338269;
+    /*background-color: #ffffff;*/
+    margin: 15px 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    -webkit-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+
+}
+
+#content {
+    text-align: center;
+    padding:30px;
+}
+
+button {
+    color: #d5dde5;
+    background-color: #1a41bd;
+    margin: 2px;
+    width: 200px;
+    height: 50px;
+    border: 3px solid #1a41bd;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #000;
+    transition: background-color 0.5s;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    border: 3px ridge #1a41bd;
+    border-radius: 20px 40px 20px 40px;
+    -webkit-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+}
+
+#input-breed {
+    margin: 5px;
+    height: 40px;
+    width:350px;
+    border: 3px solid #1a41bd;
+    border-radius: 15px;
+    padding:5px 15px;
+
+}
+
+#input-breed::placeholder {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    color: blue;
+    font-size: 20px;
+}
+
+ol {
+    list-style-position: inside;
+    padding: 10px 50px;
+    text-align: justify;
+    font-size: 30px;
+
+}
+/*body {*/
+/*    display: flow;*/
+/*}*/
+/*.centered-header {*/
+/*    text-align: center;*/
+/*    color: #3F5C78;*/
+/*    font-style: italic;*/
+/*}*/
+/*button {*/
+/*    display: inline-flex;*/
+/*    align-content: center;*/
+/*    background-color: #007BFF;*/
+/*    text-decoration: white;*/
+/*    height: 40px;*/
+/*    width: 100px;*/
+/*    color: white;*/
+/*    border-radius: 8px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*#input-breed {*/
+/*    display: inline-flex;*/
+/*    align-content: center;*/
+/*    height: 40px;*/
+/*    width: 100px;*/
+/*}*/
+/*#content {*/
+/*    background-color: #CCE5FF;*/
+/*}*/
+/*#imageOfDog {*/
+/*    text-align: center;*/
+/*    border: #007BFF 2px solid;*/
+/*}*/
